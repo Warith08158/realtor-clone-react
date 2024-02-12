@@ -44,8 +44,6 @@ export default function SignUp() {
       
       await setDoc(doc(db, 'users', user.uid), formDataCopy);
       navigate('/');
-
-
     } catch (error) {
       toast.error("something went wrong with the registration");
     }
@@ -81,7 +79,7 @@ export default function SignUp() {
             <div className='mb-6 flex items-center justify-between whitespace-nowrap text-sm sm:text-lg'>
               <p>
                 Have an account?
-                <Link to="/sign-up" className='text-red-600 hover:text-red-700 transition duration-200 ease-in-out ml-1'>Sign in</Link></p>
+                <Link to="/sign-in" className='text-red-600 hover:text-red-700 transition duration-200 ease-in-out ml-1'>Sign in</Link></p>
               <p>
                 <Link to="/forgot-password" className='text-blue-600 hover:text-blue-700 transition duration-200 ease-in-out'>Forgot Password?</Link>
               </p>
