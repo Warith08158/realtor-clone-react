@@ -18,7 +18,6 @@ export default function SignUp() {
   });
   const {name, email, password} = formData;
 
-
   function onChange(e){
     setFormData((prevState) => ({
       ...prevState,
@@ -32,10 +31,10 @@ export default function SignUp() {
     try {
       const auth = getAuth();
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-
+      console.log(auth.currentUser);
       updateProfile(auth.currentUser, {
         displayName: name
-      })
+      });
 
       const user = userCredential.user;
       const formDataCopy = {...formData};
