@@ -7,6 +7,7 @@ export function useAuthStatus() {
   const [checkingStatus, setCheckingStatus] = useState(true);
 
   useEffect(() => {
+    
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
         if(user){
