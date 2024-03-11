@@ -13,7 +13,7 @@ export default function Oauth() {
     try {
       const auth = getAuth();
       const provider = new GoogleAuthProvider();
-      const result = await signInWithPopup(auth, provider); 
+      const result = await signInWithPopup(auth, provider);
       const user = result.user;
       
       //check if the user exist in the database
